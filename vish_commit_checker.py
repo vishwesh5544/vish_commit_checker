@@ -72,5 +72,10 @@ class VishCommitChecker:
             # Append new commits to the commit history
             commit_history.extend(new_commits)
             self.save_commit_history(commit_history)
+            return True
         else:
-            print("No new commits found.")
+            return False
+        
+    def get_commit_history(self):
+        commit_history = self.load_commit_history()
+        return commit_history
