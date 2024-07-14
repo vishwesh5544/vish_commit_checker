@@ -28,8 +28,11 @@ class VishCommitChecker:
             with open(self.history_file, "w") as file:
                 json.dump([], file, indent=2)
 
-    def fetch_latest_commits(self):
-        return self.repo.get_commits()
+    def fetch_all_commits(self):
+        commits = []
+        for commit in self.repo.get_commits():
+            commits.append(commit)
+        return commits
 
     def load_commit_history(self):
         try:
@@ -43,7 +46,9 @@ class VishCommitChecker:
             json.dump(history, file, indent=2)
 
     def check_new_commits(self):
-        latest_commits = self.fetch_latest_commits()
+        latest_commits = self.fetch_all_commits()
+        print(f"Found {len(latest_commits)} commits in the repository.")
+
         commit_history = self.load_commit_history()
 
         # Extract the SHAs of the new commits
