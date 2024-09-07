@@ -1,6 +1,6 @@
 # DevOps CICD
 
-This project implements a CI/CD pipeline for deploying updates to a web application hosted in `/var/www/html/devops-cicd`. It periodically checks for new commits in the GitHub repository and pulls the latest changes if any new commits are found. After pulling the updates, it reloads Nginx to apply the changes.
+This project implements a CI/CD pipeline for deploying updates to a web application hosted in `/var/www/html/awesomeweb`. It periodically checks for new commits in the GitHub repository and pulls the latest changes if any new commits are found. After pulling the updates, it reloads Nginx to apply the changes.
 
 ## Features
 
