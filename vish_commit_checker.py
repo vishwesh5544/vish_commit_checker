@@ -3,6 +3,7 @@ import os
 from github import Github
 from dotenv import load_dotenv
 
+
 class VishCommitChecker:
     def __init__(self, repo_owner, repo_name, history_file="commit_history.json"):
         self.repo_owner = repo_owner
@@ -75,7 +76,7 @@ class VishCommitChecker:
             return True
         else:
             return False
-        
+
     def get_commit_history(self):
         commit_history = self.load_commit_history()
         return commit_history
