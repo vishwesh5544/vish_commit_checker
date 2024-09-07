@@ -1,7 +1,7 @@
 import subprocess
 
 class CommandRunner:
-    def __init__(self, working_directory="/var/www/html/devops-cicd"):
+    def __init__(self, working_directory="/var/www/html/awesomeweb"):
         self.working_directory = working_directory
 
     def run_command(self, command, use_sudo=False):
