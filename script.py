@@ -6,7 +6,7 @@ import time
 if __name__ == "__main__":
     repo_owner = "vishwesh5544"
     repo_name = "devops-cicd"
-    working_dir = "/var/www/html/devops-cicd"
+    working_dir = "/var/www/html/awesomeweb"
     
     checker = VishCommitChecker(repo_owner, repo_name)
     runner = CommandRunner(working_dir)
