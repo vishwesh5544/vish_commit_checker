@@ -11,13 +11,10 @@ if __name__ == "__main__":
     checker = VishCommitChecker(repo_owner, repo_name)
     runner = CommandRunner(working_dir)
     
-    while True:
-        if checker.check_new_commits():
-            print("New commits found. Pulling changes and reloading Nginx.")
-            runner.pull_and_reload()
-            print("Deployment complete.")
-        else: 
-            print("No new commits found.")
-        
-        time.sleep(60)
-    
+    if checker.check_new_commits():
+        print("New commits found. Pulling changes and reloading Nginx.")
+        runner.pull_and_reload()
+        print("Deployment complete.")
+    else: 
+        print("No new commits found.")
+
